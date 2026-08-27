@@ -51,12 +51,14 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/CodeAlex52/wake-log"><b>🔥 wake-log</b></a><br/>
+      <a href="https://github.com/CodeAlex52/wake-log"><b>🔥 wake-log</b></a>
+      · <a href="https://wake-log.664501775.workers.dev">🟢 在线体验</a><br/>
       「早点起床」习惯养成打卡应用，记录每一次早起。<br/>
       <sub><b>TypeScript · Vite · Cloudflare Workers</b></sub>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/CodeAlex52/psn-ns-record"><b>🎮 psn-ns-record</b></a><br/>
+      <a href="https://github.com/CodeAlex52/psn-ns-record"><b>🎮 psn-ns-record</b></a>
+      · <a href="https://psn-ns-record.664501775.workers.dev">🟢 在线体验</a><br/>
       PS5 / NS 主机游戏资产与游玩记录管理 PWA。<br/>
       <sub><b>React · TypeScript · Vite · PWA</b></sub>
     </td>
