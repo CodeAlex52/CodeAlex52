@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 生成统计卡（一次输出全部主题）
+      - name: 生成深色主题卡（tokyonight）
         uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           # 内置 token 即可读取公开数据并推送到本仓库；
@@ -44,3 +44,14 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           BRANCH_NAME: main     # 卡片直接提交到 main 的 profile-summary-card-output 目录
           UTC_OFFSET: 8         # 按北京时间统计
+          THEME: tokyonight     # 只生成深色主题，避免仓库被 60 多套无用主题塞满
+
+      - name: 生成浅色主题卡（github）
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: main
+          UTC_OFFSET: 8
+          THEME: github         # 只生成浅色主题

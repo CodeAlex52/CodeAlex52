@@ -96,23 +96,23 @@
      工作流见 .github/workflows/summary-cards.yml -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/profile-details.svg" />
-    <img width="72%" alt="GitHub stats" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/profile-details.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/0-profile-details.svg" />
+    <img width="72%" alt="GitHub stats" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/0-profile-details.svg" />
   </picture>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/repos-per-language.svg" />
-    <img width="31%" alt="Repos per language" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/repos-per-language.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" />
+    <img width="31%" alt="Repos per language" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/1-repos-per-language.svg" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/most-commit-language.svg" />
-    <img width="31%" alt="Most commit language" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/most-commit-language.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg" />
+    <img width="31%" alt="Most commit language" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/2-most-commit-language.svg" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/stats.svg" />
-    <img width="31%" alt="Total stats" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/stats.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/3-stats.svg" />
+    <img width="31%" alt="Total stats" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/3-stats.svg" />
   </picture>
 </p>
 
