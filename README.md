@@ -91,35 +91,30 @@
 
 ## 📊 GitHub Stats
 
+<!-- 统计卡由 GitHub Actions 自动生成本仓库内（profile-summary-card-output 目录），
+     不依赖任何第三方公共部署服务，稳定不裂图。
+     工作流见 .github/workflows/summary-cards.yml -->
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&border_radius=12" />
-    <img height="170em" src="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&include_all_commits=true&count_private=true&border_radius=12" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&langs_count=8&theme=tokyonight&border_radius=12" />
-    <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&langs_count=8&border_radius=12" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/profile-details.svg" />
+    <img width="72%" alt="GitHub stats" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/profile-details.svg" />
   </picture>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=CodeAlex52&theme=tokyo-night&hide_border=true&radius=12&area=true" />
-    <img width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=CodeAlex52&hide_border=true&radius=12&area=true" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/repos-per-language.svg" />
+    <img width="31%" alt="Repos per language" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/repos-per-language.svg" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/most-commit-language.svg" />
+    <img width="31%" alt="Most commit language" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/most-commit-language.svg" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/tokyonight/stats.svg" />
+    <img width="31%" alt="Total stats" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/main/profile-summary-card-output/github/stats.svg" />
   </picture>
 </p>
-
----
-
-## 📈 Weekly Coding Stats
-
-<!--START_SECTION:waka-->
-<!-- 该区域由 waka-readme Action 自动填充（见 .github/workflows/waka.yml），
-     配置好 WAKATIME_API_KEY 并跑通工作流后，这里会显示你的每周编码时长统计 -->
-```text
-⏳ 编码时长统计接入中，敬请期待……
-```
-<!--END_SECTION:waka-->
 
 ---
 

@@ -14,6 +14,9 @@ on:
   push:
     branches:
       - main           # 部署本文件推送到 main 时会自动跑第一次
+    paths-ignore:
+      # 统计卡工作流提交的目录不触发贪吃蛇重新生成，节约运行次数
+      - 'profile-summary-card-output/**'
 
 permissions:
   contents: write
