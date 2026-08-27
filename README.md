@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/CodeAlex52">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&random=false&width=500&lines=Code+is+poetry.;Every+line+tells+a+story.;Keep+building.+Keep+growing." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&random=false&width=500&lines=Code+is+poetry.;Every+line+tells+a+story.;Keep+building.+Keep+growing." alt="Typing SVG" />
   </a>
 </p>
 
@@ -12,23 +12,12 @@
 
 ## 🧑‍💻 About Me
 
-<table>
-  <tr>
-    <td width="60%">
-      <ul>
-        <li>🔭 <b>正在做</b>：<a href="https://github.com/CodeAlex52/PaiAgent">PaiAgent</a> — 轻量级 AI 工作流编排系统（类似 Dify / n8n）</li>
-        <li>🌱 <b>正在学</b>：HarmonyOS / ArkTS 原生应用开发</li>
-        <li>🧠 <b>刷题中</b>：代码随想录 · 灵茶山艾府基础算法</li>
-        <li>💻 <b>技术栈</b>：Java · TypeScript · Python · Spring AI · 鸿蒙</li>
-        <li>⚡ <b>理念</b>：Vibe Coding + 持续输出 = 最好的成长方式</li>
-      </ul>
-    </td>
-    <td width="40%" align="center">
-      <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="280" alt="coding" />
-    </td>
-  </tr>
-</table>
-
+- 🔥 **正在做**：[wake-log](https://github.com/CodeAlex52/wake-log) — 「早点起床」习惯养成打卡应用
+- ✍️ **刚上线**：[个人博客](https://firefly.664501775.workers.dev) — 基于 Astro 主题 Firefly，部署在 Cloudflare Workers 上
+- 🧠 **刷题中**：代码随想录 · 灵茶山艾府基础算法
+- 🌱 **正在学**：AI Agent 开发 · HarmonyOS / ArkTS 原生应用
+- 💻 **技术栈**：Java · TypeScript · Python · Spring AI · 鸿蒙
+- ⚡ **理念**：Vibe Coding + 持续输出 = 最好的成长方式
 
 ---
 
@@ -57,60 +46,79 @@
 
 ---
 
+## 🚀 Featured Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/CodeAlex52/wake-log"><b>🔥 wake-log</b></a><br/>
+      「早点起床」习惯养成打卡应用，记录每一次早起。<br/>
+      <sub><b>TypeScript · Vite · Cloudflare Workers</b></sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/CodeAlex52/psn-ns-record"><b>🎮 psn-ns-record</b></a><br/>
+      PS5 / NS 主机游戏资产与游玩记录管理 PWA。<br/>
+      <sub><b>React · TypeScript · Vite · PWA</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/CodeAlex52/agentStudyCode"><b>🧠 agentStudyCode</b></a><br/>
+      AI Agent 开发学习与实践代码仓库。<br/>
+      <sub><b>JavaScript · LangChain4j</b></sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://firefly.664501775.workers.dev"><b>✍️ 我的博客</b></a><br/>
+      记录学习与思考的个人博客，基于 Firefly（Astro）主题搭建。<br/>
+      <sub><b>Astro · Cloudflare Workers</b></sub>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><b>📚 学习仓库（算法 / 鸿蒙）</b></summary>
+<br/>
+
+- [LCSAFBase](https://github.com/CodeAlex52/LCSAFBase) — 灵茶山艾府基础算法代码
+- [codeRandomRecode](https://github.com/CodeAlex52/codeRandomRecode) — 代码随想录视频代码（C++）
+- [harmonySeCode](https://github.com/CodeAlex52/harmonySeCode) — 鸿蒙开发练习代码
+- [harmonyReviewCode](https://github.com/CodeAlex52/harmonyReviewCode) — 鸿蒙复习代码
+- [harmony-meiTuanDemo](https://github.com/CodeAlex52/harmony-meiTuanDemo) — 鸿蒙仿美团小案例
+
+</details>
+
+---
+
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&border_radius=12" />
-  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&langs_count=8&theme=tokyonight&border_radius=12" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&border_radius=12" />
+    <img height="170em" src="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&include_all_commits=true&count_private=true&border_radius=12" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&langs_count=8&theme=tokyonight&border_radius=12" />
+    <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&langs_count=8&border_radius=12" />
+  </picture>
 </p>
-
 
 <p align="center">
-  <img width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=CodeAlex52&theme=tokyo-night&hide_border=true&radius=12&area=true" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=CodeAlex52&theme=tokyo-night&hide_border=true&radius=12&area=true" />
+    <img width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=CodeAlex52&hide_border=true&radius=12&area=true" />
+  </picture>
 </p>
-
-
----
-
-## 📌 Pinned Projects
-
-<p align="center">
-  <a href="https://github.com/CodeAlex52/PaiAgent">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeAlex52&repo=PaiAgent&theme=tokyonight&border_radius=12&description_lines_count=2" />
-  </a>
-  <a href="https://github.com/CodeAlex52/LCSAFBase">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeAlex52&repo=LCSAFBase&theme=tokyonight&border_radius=12&description_lines_count=2" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/CodeAlex52/harmonySeCode">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeAlex52&repo=harmonySeCode&theme=tokyonight&border_radius=12&description_lines_count=2" />
-  </a>
-  <a href="https://github.com/CodeAlex52/codeRandomRecode">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=CodeAlex52&repo=codeRandomRecode&theme=tokyonight&border_radius=12&description_lines_count=2" />
-  </a>
-</p>
-
-
----
-
-## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=CodeAlex52&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7" />
-</p>
-
 
 ---
 
 ## 📈 Weekly Coding Stats
 
 <!--START_SECTION:waka-->
-
+<!-- 该区域由 waka-readme Action 自动填充（见 .github/workflows/waka.yml），
+     配置好 WAKATIME_API_KEY 并跑通工作流后，这里会显示你的每周编码时长统计 -->
 ```text
-💡 保持学习，持续输出，每天进步一点点。
+⏳ 编码时长统计接入中，敬请期待……
 ```
-
 <!--END_SECTION:waka-->
 
 ---
@@ -120,17 +128,24 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/output/github-contribution-grid-snake.svg" />
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/output/github-contribution-grid-snake.svg" />
+  <img alt="github contribution grid snake animation" width="92%" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/output/github-contribution-grid-snake.svg" />
 </picture>
 
+> ⚠️ 贪吃蛇由 GitHub Actions 自动生成（见 `.github/workflows/snake.yml`），首次部署后需等 Action 跑完才能显示。
 
 ---
 
 ## 📫 Contact
 
 <p align="center">
+  <a href="https://firefly.664501775.workers.dev">
+    <img src="https://img.shields.io/badge/Blog-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Blog" />
+  </a>
+  <a href="mailto:suzhe52@foxmail.com">
+    <img src="https://img.shields.io/badge/suzhe52%40foxmail.com-00A1D6?style=for-the-badge&label=%F0%9F%93%AE%20Email" alt="Email" />
+  </a>
   <a href="https://github.com/CodeAlex52">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </p>
 
@@ -145,4 +160,3 @@
 <p align="center">
   <i>🌟 "Code is like poetry — every line tells a story, every commit builds the future."</i>
 </p>
-

@@ -1,0 +1,38 @@
+# WakaTime 每周编码时长统计 → 自动写入主页 README
+#
+# 前置条件（缺一不可）：
+# 1. 注册 https://wakatime.com 账号
+# 2. 在常用 IDE 里装 WakaTime 插件并登录（VS Code / JetBrains 系 / Chrome 插件等）
+#    ——之后写代码会自动上报时长
+# 3. 到 https://wakatime.com/api-key 复制 API Key
+# 4. 本仓库 Settings → Secrets and variables → Actions → New repository secret：
+#      Name  = WAKATIME_API_KEY
+#      Value = 刚才复制的 Key
+# 5. 上传本文件后到 Actions 页手动 Run workflow 跑第一次；
+#     之后每天 UTC 01:00（北京时间 09:00）自动更新 README 中的统计区块。
+#
+# 填充位置：README 中 <!--START_SECTION:waka--> 与 <!--END_SECTION:waka--> 之间
+
+name: Update Weekly Coding Stats
+
+on:
+  schedule:
+    - cron: '0 1 * * *'   # 每天 UTC 01:00（北京时间 09:00）
+  workflow_dispatch:      # 支持在 Actions 页面手动触发（首次部署用它）
+
+jobs:
+  update-readme:
+    name: WakaTime → README
+    # 还没在仓库 Secrets 里配置 WAKATIME_API_KEY 时，优雅跳过而不是报错
+    if: ${{ secrets.WAKATIME_API_KEY != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          # ---- 可选微调参数（默认即可用）----
+          SHOW_TITLE: true        # 显示"统计周期"标题
+          BLOCKS: -               # 进度条样式
+          TIME_RANGE: last_7_days # 统计最近 7 天
+          SHOW_TIME: true         # 显示每种语言的时长
+          SHOW_TOTAL: true        # 显示总时长
