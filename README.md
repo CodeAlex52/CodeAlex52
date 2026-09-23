@@ -20,6 +20,7 @@
 
 ## 🏆 Open Source
 
+- ✅ **[NVIDIA/NeMo-Agent-Toolkit#2236](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2236)** (merged) — fixed streaming guardrail defects in NVIDIA's agent security framework: three defense middlewares (PII, content safety, output verifier) analyzed structured stream chunks as Python reprs, so typed chunks were scanned as repr dumps and length guards could stop early; introduced a shared typed `stream_chunk_to_text` converter with 3 mutation-verified regression tests. Filed the issue and the fix together; merged through NVIDIA's DCO/vetter/maintainer pipeline as submitted.
 - ✅ **[strands-agents/harness-sdk#4263](https://github.com/strands-agents/harness-sdk/pull/4263)** (merged) — fixed forced structured-output retry in the AWS Strands Agents SDK: `tool_choice: any` let provider built-in tools preempt the output tool; forced by tool name instead, with a two-cycle regression test. Approved and merged as submitted.
 - 🚢 **[BerriAI/litellm](https://github.com/BerriAI/litellm)** (fix shipped upstream) — diagnosed a model-capability mapping error where gpt-5.1/5.4 forwarded a rejected `reasoning_effort=minimal`; corrected the flags plus the backup map with regression tests. Shipped to `main` via the upstream registry batch PR.
 
