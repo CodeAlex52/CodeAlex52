@@ -1,37 +1,76 @@
-<h1 align="center">👋 Hi, I'm CodeAlex</h1>
-<h3 align="center">AI Agent Engineer · Open-Source Contributor</h3>
+# Hi, I'm CodeAlex 👋
 
-<p align="center">
-  <a href="https://github.com/CodeAlex52">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&random=false&width=500&lines=Event+loops.+Tool+calling.+Structured+output.;I+fix+agents+where+they+actually+break.;Repro+%3E+root+cause+%3E+regression+test." alt="Typing SVG" />
-  </a>
-</p>
+### AI Agent Engineer · Agent Reliability · LLM Infrastructure
 
----
+> **I debug agents where abstractions leak.**
 
-## 🧑‍💻 About Me
+`Agent Runtime · Tool Calling · Structured Output · Streaming · Guardrails · Observability · LLM Gateway`
 
-- 🔧 **Agent reliability** — event-loop semantics, tool calling, forced structured output, cross-provider compatibility
-- 🌐 **LLM gateway** — provider capability mapping, model parameter conversion across 100+ providers
-- 🧩 **Protocols & retrieval** — MCP, vector-database SDKs, RAG retrieval paths
-- 📦 **How I work** — minimal repro → wire-level root cause → mutation-verified regression test → merged upstream
+**Contributor to production AI infrastructure across NVIDIA NeMo Agent Toolkit, Strands Agents, LiteLLM and the OpenTelemetry ecosystem.**
 
 ---
 
-## 🏆 Open Source
+## 🏆 Selected Open Source Contributions
 
-- ✅ **[NVIDIA/NeMo-Agent-Toolkit#2236](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2236)** (merged) — fixed streaming guardrail defects in NVIDIA's agent security framework: three defense middlewares (PII, content safety, output verifier) analyzed structured stream chunks as Python reprs, so typed chunks were scanned as repr dumps and length guards could stop early; introduced a shared typed `stream_chunk_to_text` converter with 3 mutation-verified regression tests. Filed the issue and the fix together; merged through NVIDIA's DCO/vetter/maintainer pipeline as submitted.
-- ✅ **[strands-agents/harness-sdk#4263](https://github.com/strands-agents/harness-sdk/pull/4263)** (merged) — fixed forced structured-output retry in the AWS Strands Agents SDK: `tool_choice: any` let provider built-in tools preempt the output tool; forced by tool name instead, with a two-cycle regression test. Approved and merged as submitted.
-- 🚢 **[BerriAI/litellm](https://github.com/BerriAI/litellm)** (fix shipped upstream) — diagnosed a model-capability mapping error where gpt-5.1/5.4 forwarded a rejected `reasoning_effort=minimal`; corrected the flags plus the backup map with regression tests. Shipped to `main` via the upstream registry batch PR.
+### NVIDIA · [NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit) — **MERGED**
+
+Fixed structured-stream handling in **Agent Security** guardrails, preventing typed streaming chunks from being analyzed as Python representations. Introduced a shared typed stream-to-text conversion path with regression coverage across PII detection, content safety and output verification — [NVIDIA/NeMo-Agent-Toolkit#2236](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2236).
+
+### Strands Agents · [Harness SDK](https://github.com/strands-agents/harness-sdk) — **MERGED**
+
+Fixed forced structured-output retries where a generic `tool_choice` could allow provider-native tools to preempt the required output tool. Added regression coverage for the multi-cycle retry path — [strands-agents/harness-sdk#4263](https://github.com/strands-agents/harness-sdk/pull/4263).
+
+### LiteLLM — **FIX SHIPPED UPSTREAM**
+
+Diagnosed incorrect model-capability metadata that forwarded unsupported `reasoning_effort=minimal` parameters to providers. The fix landed on `main` through the upstream registry batch PR, superseding my original proposal ([#40547](https://github.com/BerriAI/litellm/pull/40547) → [#40581](https://github.com/BerriAI/litellm/pull/40581)).
 
 ---
 
-## 📊 Stats
+## 🚀 What I Build
 
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
-</p>
+### [AgentCorp](https://github.com/CodeAlex52/AgentCorp)
+
+Local-first, event-sourced, crash-recoverable, budget-bounded multi-agent delivery orchestrator.
+
+`PRD → Task DAG → Agent Execution → Review → Report`
+
+308 offline tests · SIGKILL recovery · 64-way concurrent claim race · mypy strict + ruff clean.
+
+### [agent-loop-trace](https://github.com/CodeAlex52/agent-loop-trace)
+
+A lightweight debugging and visualization tool for agent execution traces.
+
+`Agent Loop → Events → JSON IR → Visual Trace`
+
+Built for debugging agent execution, state transitions, tool calls and failures.
+
+---
+
+## 🔬 Currently Working On
+
+### [OpenLLMetry · AWS Bedrock instrumentation](https://github.com/traceloop/openllmetry/pull/4507) — **OPEN**
+
+Fixing Bedrock operation-duration telemetry by moving shared client-level metric state into per-call contexts: correct per-call latency measurement, concurrent request state isolation, and an OpenTelemetry histogram regression test.
+
+---
+
+## 🔁 How I Work
+
+`Reproduce → Trace → Root Cause → Fix → Regression Test → Review → Upstream`
+
+I care less about patch size and more about producing a complete evidence chain from failure to verified fix.
+
+---
+
+## 🧠 Focus Areas
+
+- Agent Runtime & Harness Engineering
+- Tool Calling & Structured Output
+- Streaming & Guardrails
+- LLM Gateway & Provider Compatibility
+- Observability & OpenTelemetry
+- MCP / Context / Retrieval
+- Failure Recovery & Concurrency
 
 ---
 
@@ -44,38 +83,35 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-<h3>🏗️ Frameworks & Infra</h3>
+<h3>🧠 AI & Infra</h3>
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-425CC7?style=for-the-badge&logo=opentelemetry&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-1F6FEB?style=for-the-badge&logo=modelcontextprotocol&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-4B8BBE?style=for-the-badge)
+![Vector DB](https://img.shields.io/badge/Vector_DB-2C3E50?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+<h3>🏗️ Frameworks & Tools</h3>
 
 ![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F6821F?style=for-the-badge&logo=cloudflare&logoColor=white)
 
 ---
 
-## 🚀 Featured Projects
+## 📊 GitHub Stats
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/CodeAlex52/wake-log"><b>🔥 wake-log</b></a>
-      · <a href="https://wake-log.664501775.workers.dev">🟢 Live Demo</a><br/>
-      Habit-tracker PWA for early risers — every check-in recorded.<br/>
-      <sub><b>TypeScript · Vite · Cloudflare Workers</b></sub>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/CodeAlex52/psn-ns-record"><b>🎮 psn-ns-record</b></a>
-      · <a href="https://psn-ns-record.664501775.workers.dev">🟢 Live Demo</a><br/>
-      PS5 / Switch game library and play-record manager PWA.<br/>
-      <sub><b>React · TypeScript · Vite · PWA</b></sub>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
+</p>
 
 ---
 
-## 🐍 Contribution Snake
+## 🐍 Contribution Trail
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/output/github-contribution-grid-snake-dark.svg" />
@@ -83,28 +119,31 @@
   <img alt="github contribution grid snake animation" width="92%" src="https://raw.githubusercontent.com/CodeAlex52/CodeAlex52/output/github-contribution-grid-snake.svg" />
 </picture>
 
+> `Ship. Break. Trace. Fix. Repeat.`
+
+---
+
+<details>
+<summary><b>Other things I've built</b></summary>
+<br/>
+
+- [wake-log](https://github.com/CodeAlex52/wake-log) · [Live Demo](https://wake-log.664501775.workers.dev) — habit-tracker PWA for early risers, every check-in recorded.
+- [psn-ns-record](https://github.com/CodeAlex52/psn-ns-record) · [Live Demo](https://psn-ns-record.664501775.workers.dev) — PS5 / Switch game library and play-record manager PWA.
+
+</details>
+
 ---
 
 ## 📫 Contact
 
 <p align="center">
-  <a href="https://firefly.664501775.workers.dev">
-    <img src="https://img.shields.io/badge/Blog-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Blog" />
-  </a>
   <a href="mailto:suzhe52@foxmail.com">
-    <img src="https://img.shields.io/badge/suzhe52%40foxmail.com-00A1D6?style=for-the-badge&label=%F0%9F%93%AE%20Email" alt="Email" />
+    <img src="https://img.shields.io/badge/suzhe52%40foxmail.com-00A1D6?style=for-the-badge&logo=maildotru&logoColor=white" alt="Email" />
   </a>
   <a href="https://github.com/CodeAlex52">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=CodeAlex52&label=✨%20Profile%20Views&color=blueviolet&style=for-the-badge" alt="profile views" />
-</p>
-
-<hr />
-
-<p align="center">
-  <i>🌟 "Code is like poetry — every line tells a story, every commit builds the future."</i>
+  <a href="https://firefly.664501775.workers.dev">
+    <img src="https://img.shields.io/badge/Blog-FF5D01?style=for-the-badge&logo=astro&logoColor=white" alt="Blog" />
+  </a>
 </p>
