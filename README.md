@@ -14,7 +14,15 @@
 
 ### NVIDIA · [NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit) — **MERGED**
 
+Fixed the ReAct output parser accepting JSON-formatted actions as final answers, which ended the run without ever calling the tool the model asked for. Quoted keys plus `action_input`/`input` variants are now parsed explicitly, and a JSON action missing its input raises the existing parse error instead of being silently accepted — [NVIDIA/NeMo-Agent-Toolkit#2275](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2275).
+
+### NVIDIA · [NeMo Agent Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit) — **MERGED**
+
 Fixed structured-stream handling in **Agent Security** guardrails, preventing typed streaming chunks from being analyzed as Python representations. Introduced a shared typed stream-to-text conversion path with regression coverage across PII detection, content safety and output verification — [NVIDIA/NeMo-Agent-Toolkit#2236](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2236).
+
+### Google · [ADK-JS](https://github.com/google/adk-js) — **MERGED**
+
+Excluded Gemini 3.5 Live Translate from the Gemini 3.x Live routing path, so live translation resolves through the supported model instead of an incompatible one, matching `adk-python` — [google/adk-js#922](https://github.com/google/adk-js/pull/922).
 
 ### Strands Agents · [Harness SDK](https://github.com/strands-agents/harness-sdk) — **MERGED**
 
