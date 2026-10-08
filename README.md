@@ -1,10 +1,6 @@
 <div align="center">
 
-<a href="https://github.com/CodeAlex52">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=3200&pause=800&color=58A6FF&center=true&vCenter=true&width=820&height=90&lines=AI+Agent+%26+LLM+Infra+Engineer;I+debug+agents+where+abstractions+leak.;Merged+fixes+in+NVIDIA%2C+Google+%26+AWS+agent+stacks" alt="AI Agent & LLM Infra Engineer" />
-</a>
-
-**`Agent Runtime` · `Tool Calling` · `Structured Output` · `Streaming` · `Guardrails` · `Observability` · `LLM Gateway`**
+**AI Agent & LLM Infra Engineer** — I debug agents where abstractions leak.
 
 <p>
   <a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pulls?q=is%3Apr+author%3ACodeAlex52"><img alt="NVIDIA · 2 merged PRs" src="https://img.shields.io/badge/NVIDIA-2_merged_PRs-76B900?style=for-the-badge&logo=nvidia&logoColor=white"></a>
@@ -13,7 +9,7 @@
   <a href="https://github.com/BerriAI/litellm/pull/40581"><img alt="LiteLLM · fix shipped" src="https://img.shields.io/badge/LiteLLM-fix_shipped-2F81F7?style=for-the-badge&logo=python&logoColor=white"></a>
 </p>
 
-**4 upstream PRs merged · 21 in review · across NVIDIA, Google, AWS, Cloudflare, Meta, Kubernetes, Sentry, Vercel, Stanford, Anthropic**
+`Python` · `TypeScript` · `Go` ｜ `Agent Runtime` · `Tool Calling` · `Streaming` · `Guardrails` · `Observability`
 
 </div>
 
@@ -29,8 +25,56 @@
 | **AWS · Strands Agents** — forced structured-output retries could be preempted by provider-native tools through a generic `tool_choice`; fixed with multi-cycle retry regression tests. — [#4263](https://github.com/strands-agents/harness-sdk/pull/4263) | ✅ **Merged** |
 | **LiteLLM** — diagnosed wrong model-capability metadata forwarding unsupported `reasoning_effort=minimal`; the fix landed on `main` through the upstream registry batch PR. — [#40547](https://github.com/BerriAI/litellm/pull/40547) → [#40581](https://github.com/BerriAI/litellm/pull/40581) | 🚢 **Fix shipped upstream** |
 
+---
+
+## 🚀 Featured work
+
+### [AgentCorp](https://github.com/CodeAlex52/AgentCorp) — crash-recoverable multi-agent delivery orchestrator
+
+`(git repo, PRD) → reviewed delivery + auditable event ledger` — local-first and **offline-verifiable**: 310 deterministic tests that need no network and no API keys.
+
+```mermaid
+flowchart LR
+    PRD([PRD]) --> P[planner] --> DAG[Task DAG] --> S[scheduler]
+    S --> W[worker] --> R[reviewer]
+    R -->|approve| OUT([report])
+    R -->|rework| S
+    S <--> ST[(event store<br/>claim · lease · replay)]
+    S --> B[budget hard-stop]
+    S --> RL[retry · breaker · quarantine]
+    SUP[supervisor] -.-> S
+```
+
+**Failure-path first — each claim has a runnable test:**
+
+| Claim | Evidence |
+| --- | --- |
+| exactly-once dispatch | 64 threads race one task; exactly one claim wins (`tests/test_store.py`) |
+| crash recovery | real `SIGKILL` mid-run → `resume`; DONE tasks never re-run (`tests/test_recovery_subprocess.py`) |
+| concurrent resume guard | per-run OS lock: a second resumer fails fast instead of double-running (`tests/test_resume_guard.py`) |
+| budget hard-stop | four-dimensional check-before-dispatch with admission reservations |
+| replayability | `verify_replay()` reproduces the projection byte-for-byte after rework and crashes |
+| real-provider smoke | opt-in `-m smoke` runs the same Engine path against a live provider and prints run metrics (`tests/test_smoke_provider.py`) |
+
+```bash
+uv run pytest -q                        # 310 deterministic tests, ~5s
+uv run python examples/end_to_end.py    # byte-reproducible benchmark run
+```
+
+---
+
+### [agent-loop-trace](https://github.com/CodeAlex52/agent-loop-trace) — turn agent loop bugs into a shareable timeline
+
+`event log → JSON IR → 5 validations → single-file HTML` · node ≥ 18, zero dependencies.
+
+This is how I explain my own merged fixes — Strands #4263 forced-retry preemption, DSPy #10363 reward path — as a verifiable sequence diagram:
+
+<a href="https://github.com/CodeAlex52/agent-loop-trace"><img src="https://raw.githubusercontent.com/CodeAlex52/agent-loop-trace/main/docs/assets/trace-demo.png" width="760" alt="rendered trace: Strands forced structured-output" /></a>
+
+---
+
 <details>
-<summary><b>🔬 21 PRs in review — NVIDIA · Cloudflare · Meta · Kubernetes · Sentry · Vercel · Stanford · Anthropic · …</b></summary>
+<summary><b>🔬 In review — 21 PRs across NVIDIA · Cloudflare · Meta · Kubernetes · Sentry · Vercel · Stanford · Anthropic · …</b></summary>
 
 <br/>
 
@@ -64,82 +108,10 @@
 
 ---
 
-## 🚀 Selected work
-
-### [AgentCorp](https://github.com/CodeAlex52/AgentCorp) — local-first multi-agent delivery orchestrator
-
-> `PRD → Task DAG → Agent Execution → Review → Report`
-
-Event-sourced · crash-recoverable (**SIGKILL** recovery) · budget-bounded · **308 offline tests** · 64-way concurrent claim races · `mypy --strict` + `ruff` clean.
-
-### [agent-loop-trace](https://github.com/CodeAlex52/agent-loop-trace) — visual trace debugger for agent loops
-
-> `Agent Loop → Events → JSON IR → Visual Trace`
-
-Built for debugging agent execution, state transitions, tool calls and failures.
-
----
-
 ## 🔁 How I work
 
 ```text
 Reproduce → Trace → Root Cause → Fix → Regression Test → Review → Upstream
 ```
 
-I optimize for a complete evidence chain from failure to a verified fix — not patch size.
-
----
-
-## 🧠 Focus areas
-
-- Agent Runtime & Harness Engineering
-- Tool Calling & Structured Output
-- Streaming & Guardrails
-- LLM Gateway & Provider Compatibility
-- Observability & OpenTelemetry
-- MCP / Context / Retrieval
-- Failure Recovery & Concurrency
-
----
-
-## 🛠️ Tech stack
-
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3176C6?style=for-the-badge&logo=typescript&logoColor=white">
-  <img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white">
-  <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-</p>
-
-<p align="center">
-  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white">
-  <img alt="OpenTelemetry" src="https://img.shields.io/badge/OpenTelemetry-425CC7?style=for-the-badge&logo=opentelemetry&logoColor=white">
-  <img alt="MCP" src="https://img.shields.io/badge/MCP-1F6FEB?style=for-the-badge&logo=modelcontextprotocol&logoColor=white">
-  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-  <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white">
-</p>
-
-<p align="center">
-  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
-  <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-F6821F?style=for-the-badge&logo=cloudflare&logoColor=white">
-</p>
-
----
-
-## 📈 By the numbers
-
-<p align="center">
-  <img height="150" alt="Merged pull requests" src="https://github-readme-stats.vercel.app/api?username=CodeAlex52&show_icons=true&hide=stars,commits,issues,contribs&show=prs_merged,prs_merged_percentage&theme=tokyonight&hide_border=true&rank_icon=github">
-  &nbsp;
-  <img height="150" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CodeAlex52&layout=compact&langs_count=8&theme=tokyonight&hide_border=true">
-</p>
-
----
-
-<div align="center">
-
-**The fastest way to judge me is to read a PR diff.**
-
-</div>
+Every claim on this page links to a PR diff or a test you can run; merged and open are labelled per item. I optimize for a complete evidence chain from failure to verified fix — not patch size.
