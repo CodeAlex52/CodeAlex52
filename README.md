@@ -22,6 +22,13 @@
 - **AWS · Strands Agents** — [structured-output retry preempted by provider-native tools](https://github.com/strands-agents/harness-sdk/pull/4263)
 - **LiteLLM** — [`reasoning_effort=minimal` capability metadata, shipped on main](https://github.com/BerriAI/litellm/pull/40581)
 
+## In review
+
+- **Kubernetes SIG · Cluster API** — [KCP propagates `DNS.imageRepository` when updating the kubeadm config map](https://github.com/kubernetes-sigs/cluster-api/pull/14301)
+- **Prometheus · procfs** — [arm64 CPU identity fields: implementer / variant / part / revision](https://github.com/prometheus/procfs/pull/876)
+- **NVIDIA · NeMo Agent Toolkit** — [union targets in `DecomposedType.is_subtype`](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2309) · [converter source-type matching](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2310) · [guardrails stream chunks rendered as text](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2308)
+- **Agent Router** — [redact error response bodies per OpenInference TraceConfig](https://github.com/theagentrouter/agent-router/pull/2730)
+
 ## Projects
 
 ### [AgentCorp](https://github.com/CodeAlex52/AgentCorp) — crash-recoverable multi-agent orchestrator
