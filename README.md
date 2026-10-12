@@ -9,7 +9,6 @@
 <a href="https://github.com/langgenius/dify/pull/43875"><img alt="Dify · merged" src="https://img.shields.io/badge/Dify-merged-1C64F2?style=flat-square&logo=dify&logoColor=white"></a>
 <a href="https://github.com/bytedance/deer-flow/pull/6689"><img alt="ByteDance DeerFlow · merged" src="https://img.shields.io/badge/ByteDance_DeerFlow-merged-325AB4?style=flat-square&logo=bytedance&logoColor=white"></a>
 <a href="https://github.com/strands-agents/harness-sdk/pull/4263"><img alt="AWS Strands · merged" src="https://img.shields.io/badge/AWS_Strands-merged-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white"></a>
-<a href="https://github.com/BerriAI/litellm/pull/40581"><img alt="LiteLLM · fix shipped" src="https://img.shields.io/badge/LiteLLM-shipped-2F81F7?style=flat-square&logo=python&logoColor=white"></a>
 
 </div>
 
@@ -20,12 +19,12 @@
 - **Dify** — [strict typing for the workspace permission tests, part of the repo-wide strict Pyrefly effort](https://github.com/langgenius/dify/pull/43875)
 - **ByteDance · DeerFlow** — [skill scanner matched fork bombs by spelling, so renamed and respaced payloads passed the blocking gate](https://github.com/bytedance/deer-flow/pull/6689)
 - **AWS · Strands Agents** — [structured-output retry preempted by provider-native tools](https://github.com/strands-agents/harness-sdk/pull/4263)
-- **LiteLLM** — [`reasoning_effort=minimal` capability metadata, shipped on main](https://github.com/BerriAI/litellm/pull/40581)
 
 ## In review
 
 - **Kubernetes SIG · Cluster API** — [KCP propagates `DNS.imageRepository` when updating the kubeadm config map](https://github.com/kubernetes-sigs/cluster-api/pull/14301)
 - **Prometheus · procfs** — [arm64 CPU identity fields: implementer / variant / part / revision](https://github.com/prometheus/procfs/pull/876)
+- **ByteDance · DeerFlow** — [a scheduled task keeps its cadence when switching to Custom cron](https://github.com/bytedance/deer-flow/pull/6750)
 - **NVIDIA · NeMo Agent Toolkit** — [union targets in `DecomposedType.is_subtype`](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2309) · [converter source-type matching](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2310) · [guardrails stream chunks rendered as text](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2308)
 - **Agent Router** — [redact error response bodies per OpenInference TraceConfig](https://github.com/theagentrouter/agent-router/pull/2730)
 
