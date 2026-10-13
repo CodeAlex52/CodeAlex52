@@ -24,7 +24,6 @@
 
 - **Kubernetes SIG · Cluster API** — [KCP propagates `DNS.imageRepository` when updating the kubeadm config map](https://github.com/kubernetes-sigs/cluster-api/pull/14301)
 - **Prometheus · procfs** — [arm64 CPU identity fields: implementer / variant / part / revision](https://github.com/prometheus/procfs/pull/876)
-- **ByteDance · DeerFlow** — [a scheduled task keeps its cadence when switching to Custom cron](https://github.com/bytedance/deer-flow/pull/6750)
 - **NVIDIA · NeMo Agent Toolkit** — [union targets in `DecomposedType.is_subtype`](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2309) · [converter source-type matching](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2310) · [guardrails stream chunks rendered as text](https://github.com/NVIDIA/NeMo-Agent-Toolkit/pull/2308)
 - **Agent Router** — [redact error response bodies per OpenInference TraceConfig](https://github.com/theagentrouter/agent-router/pull/2730)
 
