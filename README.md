@@ -9,6 +9,7 @@
 <a href="https://github.com/langgenius/dify/pull/43875"><img alt="Dify · merged" src="https://img.shields.io/badge/Dify-merged-1C64F2?style=flat-square&logo=dify&logoColor=white"></a>
 <a href="https://github.com/bytedance/deer-flow/pull/6689"><img alt="ByteDance DeerFlow · merged" src="https://img.shields.io/badge/ByteDance_DeerFlow-merged-325AB4?style=flat-square&logo=bytedance&logoColor=white"></a>
 <a href="https://github.com/strands-agents/harness-sdk/pull/4263"><img alt="AWS Strands · merged" src="https://img.shields.io/badge/AWS_Strands-merged-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white"></a>
+<a href="https://github.com/morluto/rea/pull/2936"><img alt="rea · merged" src="https://img.shields.io/badge/morluto_rea-merged-2F81F7?style=flat-square&logo=github&logoColor=white"></a>
 
 </div>
 
@@ -19,6 +20,7 @@
 - **Dify** — [strict typing for the workspace permission tests, part of the repo-wide strict Pyrefly effort](https://github.com/langgenius/dify/pull/43875)
 - **ByteDance · DeerFlow** — [skill scanner matched fork bombs by spelling, so renamed and respaced payloads passed the blocking gate](https://github.com/bytedance/deer-flow/pull/6689)
 - **AWS · Strands Agents** — [structured-output retry preempted by provider-native tools](https://github.com/strands-agents/harness-sdk/pull/4263)
+- **morluto/rea** — [packaged platform check accepted overview responses without a procedure count](https://github.com/morluto/rea/pull/2936)
 
 ## In review
 
