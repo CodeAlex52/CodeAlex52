@@ -4,7 +4,7 @@
 
 **AI Agent & LLM Infra** — I debug agents where abstractions leak.
 
-<a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pulls?q=is%3Apr+author%3ACodeAlex52"><img alt="NVIDIA · 2 merged" src="https://img.shields.io/badge/NVIDIA-2_merged-76B900?style=flat-square&logo=nvidia&logoColor=white"></a>
+<a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pulls?q=is%3Apr+author%3ACodeAlex52"><img alt="NVIDIA · 5 merged" src="https://img.shields.io/badge/NVIDIA-5_merged-76B900?style=flat-square&logo=nvidia&logoColor=white"></a>
 <a href="https://github.com/google/adk-js/pull/922"><img alt="Google ADK-JS · merged" src="https://img.shields.io/badge/Google_ADK--JS-merged-4285F4?style=flat-square&logo=google&logoColor=white"></a>
 <a href="https://github.com/langgenius/dify/pull/43875"><img alt="Dify · merged" src="https://img.shields.io/badge/Dify-merged-1C64F2?style=flat-square&logo=dify&logoColor=white"></a>
 <a href="https://github.com/bytedance/deer-flow/pull/6689"><img alt="ByteDance DeerFlow · merged" src="https://img.shields.io/badge/ByteDance_DeerFlow-merged-325AB4?style=flat-square&logo=bytedance&logoColor=white"></a>
