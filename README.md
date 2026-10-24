@@ -4,10 +4,12 @@
 
 **AI Agent & LLM Infra** — I debug agents where abstractions leak.
 
-<a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pulls?q=is%3Apr+author%3ACodeAlex52"><img alt="NVIDIA · 5 merged" src="https://img.shields.io/badge/NVIDIA-5_merged-76B900?style=flat-square&logo=nvidia&logoColor=white"></a>
+<a href="https://github.com/NVIDIA/NeMo-Agent-Toolkit/pulls?q=is%3Apr+author%3ACodeAlex52"><img alt="NVIDIA · 8 merged" src="https://img.shields.io/badge/NVIDIA-8_merged-76B900?style=flat-square&logo=nvidia&logoColor=white"></a>
 <a href="https://github.com/google/adk-js/pull/922"><img alt="Google ADK-JS · merged" src="https://img.shields.io/badge/Google_ADK--JS-merged-4285F4?style=flat-square&logo=google&logoColor=white"></a>
 <a href="https://github.com/langgenius/dify/pull/43875"><img alt="Dify · merged" src="https://img.shields.io/badge/Dify-merged-1C64F2?style=flat-square&logo=dify&logoColor=white"></a>
 <a href="https://github.com/bytedance/deer-flow/pull/6689"><img alt="ByteDance DeerFlow · merged" src="https://img.shields.io/badge/ByteDance_DeerFlow-merged-325AB4?style=flat-square&logo=bytedance&logoColor=white"></a>
+<a href="https://github.com/bytedance/deer-flow/pull/7285"><img alt="ByteDance DeerFlow · 2 merged" src="https://img.shields.io/badge/ByteDance_DeerFlow-2_merged-325AB4?style=flat-square&logo=bytedance&logoColor=white"></a>
+<a href="https://github.com/traceloop/openllmetry/pull/4655"><img alt="Traceloop OpenLLMetry · in review" src="https://img.shields.io/badge/Traceloop_OpenLLMetry-in_review-76B900?style=flat-square&logo=opentelemetry&logoColor=white"></a>
 <a href="https://github.com/strands-agents/harness-sdk/pull/4263"><img alt="AWS Strands · merged" src="https://img.shields.io/badge/AWS_Strands-merged-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white"></a>
 <a href="https://github.com/morluto/rea/pull/2936"><img alt="rea · merged" src="https://img.shields.io/badge/morluto_rea-merged-2F81F7?style=flat-square&logo=github&logoColor=white"></a>
 
@@ -21,11 +23,13 @@
 - **Google · ADK-JS** — [Gemini 3.5 Live Translate misrouted through the Gemini 3.x Live path](https://github.com/google/adk-js/pull/922)
 - **Dify** — [strict typing for the workspace permission tests, part of the repo-wide strict Pyrefly effort](https://github.com/langgenius/dify/pull/43875)
 - **ByteDance · DeerFlow** — [skill scanner matched fork bombs by spelling, so renamed and respaced payloads passed the blocking gate](https://github.com/bytedance/deer-flow/pull/6689)
+- **ByteDance · DeerFlow (ctd.)** — [MindIE newline decoder corrupted `~~~`-fenced code blocks and missed split fence closers; reworked after expert review into a delimiter-latching cursor decoder with exhaustive chunk-boundary tests](https://github.com/bytedance/deer-flow/pull/7285)
 - **AWS · Strands Agents** — [structured-output retry preempted by provider-native tools](https://github.com/strands-agents/harness-sdk/pull/4263)
 - **morluto/rea** — [packaged platform check accepted overview responses without a procedure count](https://github.com/morluto/rea/pull/2936)
 
 ## In review
 
+- **Traceloop · OpenLLMetry** — [Bedrock instrumentation recorded no `gen_ai.client.operation.duration` for failed calls; now all 8 sync/async failure paths record duration with `error.type` (+2 async wrappers that leaked spans)](https://github.com/traceloop/openllmetry/pull/4655)
 - **Kubernetes SIG · Cluster API** — [KCP propagates `DNS.imageRepository` when updating the kubeadm config map](https://github.com/kubernetes-sigs/cluster-api/pull/14301)
 - **Prometheus · procfs** — [arm64 CPU identity fields: implementer / variant / part / revision](https://github.com/prometheus/procfs/pull/876)
 - **Agent Router** — [redact error response bodies per OpenInference TraceConfig](https://github.com/theagentrouter/agent-router/pull/2730)
